@@ -119,22 +119,47 @@ header img {
 }
 
 .testimonial {
-  margin: 20px;
-  cursor: pointer;
   position: relative;
-  display: inline-block; /* Aggiunto per disporre i video in fila orizzontale */
-  width: 300px; /* Larghezza fissa per garantire la stessa grandezza */
-  height: 200px; /* Altezza fissa per garantire la stessa altezza */
-  overflow: hidden; /* Nasconde parte del video che supera il blocco */
+  margin: 20px auto;
+  cursor: pointer;
+  display: inline-block;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .testimonial-video {
   width: 100%;
-  height: 100%; /* Impedisce la distorsione dell'immagine */
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease-in-out;
-  object-fit: cover; /* Copre l'area del contenitore senza distorsione */
+  object-fit: cover;
+}
+
+.testimonial:hover .cover {
+  display: none;
+}
+
+.testimonial:hover .testimonial-video {
+  display: block;
 }
 
 .testimonial p {
@@ -143,20 +168,6 @@ header img {
   color: #fff;
 }
 
-.testimonial:hover .testimonial-video {
-  transform: scale(1.1);
-}
-
-/* Aggiunto stile per nascondere la barra di avanzamento fino al clic */
-@media only screen and (max-width: 600px) {
-  .testimonial-video {
-    object-fit: cover;
-  }
-
-  .testimonial input {
-    display: none;
-  }
-}
 
 .social-icons a img {
     width: 30px;
