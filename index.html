@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
   <title>Mozzarella-Campana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -13,8 +14,10 @@
     <img src="images/logo.png" alt="Mozzarella-Campana Logo">
     <h1>Mozzarella-Campana</h1>
     <h2>La certezza della qualità!</h2>
-		<h2>Per informazioni +39 351 701 1705</h2>
-  </header>
+    <div class="flashy-box">
+      <h2 class="flashing-text">Chiama ora +39 351 701 1705</h2>
+    </div>
+    </header>
 
   <section class="dashboard">
     <div class="product" onclick="showImages(['images/dashboard/1/mozz.png', 'images/dashboard/1/ciliegine.png', 'images/dashboard/1/bocc.png', 'images/dashboard/1/125.png'])">
@@ -23,7 +26,7 @@
     </div>
     <div class="product" onclick="showImages(['images/dashboard/2/p1.png', 'images/dashboard/2/p2.png', 'images/dashboard/2/p3.png', 'images/dashboard/2/p4.png', 'images/dashboard/2/p5.png', 'images/dashboard/2/p6.png'])">
       <img src="images/dashboard/2/part.png" alt="Tagli particolari">
-      <p>Tagli particolari</p>
+      <p>Formati e tagli particolari</p>
     </div>
     <div class="product" onclick="showImages(['images/dashboard/3/ric.png', 'images/dashboard/3/ric1.png', 'images/dashboard/3/ric2.png', 'images/dashboard/3/ric3.png'])">
       <img src="images/dashboard/3/ric.png" alt="Ricotta di Bufala">
@@ -34,8 +37,9 @@
   <section class="testimonials">
     <h2>I nostri clienti condividono...</h2>
     <div class="testimonial" onclick="playVideoPreview('videos/vid1.mp4')">
-      <div class="cover">
+      <div class="cover" style="position: relative;">
         <img src="videos/th1.png" alt="Cover 1">
+        <div class="overlay-text">Figliata di Bufala</div>
       </div>
       <video loop muted playsinline id="video1" class="testimonial-video">
         <source src="videos/vid1.mp4" type="video/mp4">
@@ -44,8 +48,9 @@
       <p></p>
     </div>
     <div class="testimonial" onclick="playVideoPreview('videos/vid2.mp4')">
-      <div class="cover">
+      <div class="cover" style="position: relative;">
         <img src="videos/th2.png" alt="Cover 2">
+        <div class="overlay-text">Mozzarellona da 1kg</div>
       </div>
       <video loop muted playsinline id="video2" class="testimonial-video">
         <source src="videos/vid2.mp4" type="video/mp4">
@@ -55,10 +60,8 @@
     </div>
   </section>
 
-
 	<section id="delivery" class="delivery-section">
   <h2>Consegne a Domicilio</h2>
-	<p class="delivery-info">Le consegne a domicilio sono gratuite a partire dall'8 dicembre e si svolgono ogni Venerdì e Domenica.</p>
 	<div class="video-container" onclick="toggleVideo()">
     <video loop autoplay muted controlsList="nodownload" id="pandoroVideo">
       <source src="videos/pandoro.mp4" type="video/mp4">
@@ -94,7 +97,7 @@
         <a href="tel:+393517011705">Contattatami</a>
     </div>
     <p>P. IVA 03890720612</p>
-    <p class="footer-text">&copy; 2023 Mozzarella-Campana. Tutti i diritti riservati. +39 351 701 1705</p>
+    <p class="footer-text">&copy; 2023 Mozzarella-Campana. Tutti i diritti riservati.</p>
 		<div class="social-icons">
 		<a href="https://www.facebook.com/mozzarellacampanacom" target="_blank" rel="noopener noreferrer">
 				<img src="images/icons/facebook-icon.png" alt="Facebook">
