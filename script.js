@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const contactButton = document.querySelector(".contact-button a");
+
+    // Funzione per il reindirizzamento in base alla posizione
+    function redirectBasedOnLocation() {
+        // Esempio di URL di servizio di geolocalizzazione gratuito
+        const geoLocationService = "https://ipapi.co/json/";
+
+        // Effettua una richiesta HTTP per ottenere informazioni sulla posizione
+        fetch(geoLocationService)
+            .then(response => response.json())
+            .then(data => {
+                // Verifica la nazione dell'utente
+                const userCountryCode = data.country;
+
+                // Se la nazione non è Italia, reindirizza a un'altra pagina
+                if (userCountryCode !== "IT") {
+                    window.location.href = "test.html";
+                }
+            })
+            .catch(error => console.error("Errore nel rilevamento della posizione:", error));
+    }
+
+    // Esegui la funzione di reindirizzamento quando la pagina è completamente caricata
+    redirectBasedOnLocation();
+
+    contactButton.addEventListener("click", function () {
+        window.location.href = "tel:+393517011705";
+    });
+
+    contactButton.addEventListener("touchstart", function () {
+        window.location.href = "tel:+393517011705";
+    });
+
 function showImages(images) {
   // Creare un elemento div per la visualizzazione delle immagini aggiuntive
   var galleryContainer = document.createElement('div');
