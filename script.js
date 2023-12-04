@@ -1,25 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const contactButton = document.querySelector(".contact-button a");
+    // Esegui la richiesta a ipinfo.io per ottenere informazioni sulla posizione
+    fetch('https://ipinfo.io/json')
+        .then(response => response.json())
+        .then(data => {
+            // Estrai il codice del paese dalle informazioni ottenute
+            const userCountryCode = data.country;
 
-    // Funzione per il reindirizzamento in base alla posizione
-    function redirectBasedOnLocation() {
-        // Esempio di URL di servizio di geolocalizzazione gratuito
-        const geoLocationService = "https://ipapi.co/json/";
-
-        // Effettua una richiesta HTTP per ottenere informazioni sulla posizione
-        fetch(geoLocationService)
-            .then(response => response.json())
-            .then(data => {
-                // Verifica la nazione dell'utente
-                const userCountryCode = data.country;
-
-                // Se la nazione non è Italia, reindirizza a un'altra pagina
-                if (userCountryCode !== "IT") {
-                    window.location.href = "test.html";
-                }
-            })
-            .catch(error => console.error("Errore nel rilevamento della posizione:", error));
-    }
+            // Se la nazione non è Italia, reindirizza a un'altra pagina
+            if (userCountryCode !== "IT") {
+                window.location.href = "global.html";
+            }
+        })
+        .catch(error => console.error("Errore nel rilevamento della posizione:", error));
+    });
 
     // Esegui la funzione di reindirizzamento quando la pagina è completamente caricata
     redirectBasedOnLocation();
