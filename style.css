@@ -159,8 +159,16 @@ header img {
 }
 
 .social-icons a img {
-    max-width: 30px; /* Imposta la larghezza massima desiderata */
-    height: auto; /* Mantiene l'aspetto proporzionato */
+    width: 30px;
+    height: 30px;
+}
+
+/* Media query per schermi più piccoli, ad esempio, dispositivi mobili */
+@media only screen and (max-width: 600px) {
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
 }
 
 .footer-text {
@@ -314,20 +322,22 @@ button {
 
 .contact-button {
     margin-top: 10px;
+    text-align: center; /* Centra il bottone nel container */
 }
 
 .contact-button a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #4CAF50; /* Colore di sfondo */
-    color: #fff; /* Colore del testo */
+    background-color: #4CAF50;
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 14px;
     text-decoration: none;
     transition: background-color 0.3s;
+    cursor: pointer; /* Aggiunto per indicare un elemento cliccabile */
 }
 
 .contact-button a:hover {
-    background-color: #45a049; /* Cambia colore al passaggio del mouse */
+    background-color: #45a049;
 }

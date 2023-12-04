@@ -139,3 +139,17 @@ function toggleVideo() {
     pandoroVideo.pause();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const contactButton = document.querySelector(".contact-button a");
+
+    contactButton.addEventListener("click", function() {
+        window.location.href = "tel:+393517011705";
+    });
+
+    contactButton.addEventListener("touchstart", function() {
+        window.location.href = "tel:+393517011705";
+    });
+
+    // Altri tuoi script...
+});
