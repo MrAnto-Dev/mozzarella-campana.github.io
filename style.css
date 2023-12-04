@@ -1,0 +1,302 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #292929, #1a1a1a);
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.product {
+  text-align: center;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.product img {
+  width: 250px;
+  height: 250px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+/* Stili per la galleria di immagini aggiuntive */
+.gallery-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-images {
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+  max-height: 100%;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
+}
+
+.gallery-images img {
+  max-width: 80%;
+  max-height: 80%;
+  border: 2px solid #333; /* Colore bordo più scuro */
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  scroll-snap-align: center;
+}
+
+.prev-button,
+.next-button,
+.close-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5); /* Sfondo più scuro */
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.prev-button {
+  left: 10px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+.close-button {
+  top: 10px;
+  right: 10px;
+}
+
+/* Stili per la sezione Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.testimonial {
+  margin: 20px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block; /* Aggiunto per disporre i video in fila orizzontale */
+  width: 300px; /* Larghezza fissa per garantire la stessa grandezza */
+  height: 200px; /* Altezza fissa per garantire la stessa altezza */
+  overflow: hidden; /* Nasconde parte del video che supera il blocco */
+}
+
+.testimonial-video {
+  width: 100%;
+  height: 100%; /* Impedisce la distorsione dell'immagine */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover; /* Copre l'area del contenitore senza distorsione */
+}
+
+.testimonial p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.testimonial:hover .testimonial-video {
+  transform: scale(1.1);
+}
+
+/* Aggiunto stile per nascondere la barra di avanzamento fino al clic */
+.testimonial input {
+  display: none;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Aggiunto stile per il pulsante di chiusura nei video */
+.video-container .close-button {
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.video-container .close-button:hover {
+  color: #ffcc00;
+  transform: rotate(180deg);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delivery-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.delivery-section h2 {
+  color: #ff6347; /* Rosso chiaro */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  margin: 20px 0;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.packages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.package {
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.package:hover {
+  transform: scale(1.05);
+}
+
+.package h3 {
+  color: #ff6347; /* Rosso chiaro */
+}
+
+.package p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.package ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.package ul li {
+  margin-bottom: 8px;
+}
+
+.delivery-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.delivery-section h2 {
+  color: #ff6347; /* Rosso chiaro */
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.delivery-info {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
