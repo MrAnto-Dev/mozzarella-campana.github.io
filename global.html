@@ -1,1 +1,145 @@
-ciao
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <title>Mozzarella-Campana</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header style="background-image: url('images/bg.png');">
+    <img src="images/logo.png" alt="Mozzarella-Campana Logo">
+    <h1>Mozzarella-Campana</h1>
+    <h2>The certainty of quality!</h2>
+    <div class="flashy-box">
+      <h2 class="flashing-text">Contact on WhatsApp: +39 351 701 1705</h2>
+    </div>
+  </header>
+
+  <section class="dashboard">
+    <div class="product" onclick="showImages(['images/dashboard/1/mozz.png', 'images/dashboard/1/ciliegine.png', 'images/dashboard/1/bocc.png', 'images/dashboard/1/125.png'])">
+      <img src="images/dashboard/1/mozz.png" alt="Buffalo Mozzarella">
+      <p>Buffalo Mozzarella</p>
+    </div>
+    <div class="product" onclick="showImages(['images/dashboard/2/p1.png', 'images/dashboard/2/p2.png', 'images/dashboard/2/p3.png', 'images/dashboard/2/p4.png', 'images/dashboard/2/p5.png', 'images/dashboard/2/p6.png'])">
+      <img src="images/dashboard/2/part.png" alt="Special Cuts">
+      <p>Special Sizes and Cuts</p>
+      <div class="overlay-text2">Click me</div>
+    </div>
+    <div class="product" onclick="showImages(['images/dashboard/3/ric.png', 'images/dashboard/3/ric1.png', 'images/dashboard/3/ric2.png', 'images/dashboard/3/ric3.png'])">
+      <img src="images/dashboard/3/ric.png" alt="Buffalo Ricotta">
+      <p>Buffalo Ricotta</p>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Our customers share...</h2>
+    <div class="testimonial" onclick="playVideoPreview('videos/vid1.mp4')">
+      <div class="cover" style="position: relative;">
+        <img src="videos/th1.png" alt="Cover 1">
+        <div class="overlay-text">Buffalo Figliata</div>
+      </div>
+      <video loop muted playsinline id="video1" class="testimonial-video">
+        <source src="videos/vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p></p>
+    </div>
+    <div class="testimonial" onclick="playVideoPreview('videos/vid2.mp4')">
+      <div class="cover" style="position: relative;">
+        <img src="videos/th2.png" alt="Cover 2">
+        <div class="overlay-text">1kg Mozzarellona</div>
+      </div>
+      <video loop muted playsinline id="video2" class="testimonial-video">
+        <source src="videos/vid2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p></p>
+    </div>
+    <div class="testimonial" onclick="playVideoPreview('videos/vid3.mp4')">
+      <div class="cover" style="position: relative;">
+        <img src="videos/th3.png" alt="Cover 3">
+        <div class="overlay-text">Stuffed Mozzarelline</div>
+      </div>
+      <video loop muted playsinline id="video3" class="testimonial-video">
+        <source src="videos/vid3.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p></p>
+    </div>
+    <div class="testimonial" onclick="playVideoPreview('videos/vid4.mp4')">
+      <div class="cover" style="position: relative;">
+        <img src="videos/th4.png" alt="Cover 4">
+        <div class="overlay-text">Parma Buffalo Braid</div>
+      </div>
+      <video loop muted playsinline id="video4" class="testimonial-video">
+        <source src="videos/vid4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="delivery" class="delivery-section">
+    <h2>Home Deliveries</h2>
+    <div class="video-container" onclick="toggleVideo()">
+      <video loop autoplay muted controlsList="nodownload" id="pandoroVideo">
+        <source src="videos/pandoro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="packages">
+        <div class="package">
+          <h3>Tasting</h3>
+          <p>Price: 59.95€ VAT included</p>
+          <ul>
+            <li>About 1kg Buffalo Pandoro</li>
+            <li>500g smoked buffalo braid</li>
+            <li>1kg ricotta fuscella</li>
+            <li>1 pastiera</li>
+          </ul>
+        </div>
+        <div class="package">
+          <h3>Tasting-Maxi</h3>
+          <p>Price: 84.95€ VAT included</p>
+          <ul>
+            <li>About 1.5kg Buffalo Pandoro with mortadella and pistachio</li>
+            <li>500g smoked buffalo braid</li>
+            <li>500g smoked buffalo nuggets</li>
+            <li>1kg ricotta fuscella</li>
+            <li>1 pastiera</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact-button">
+        <a href="tel:+393517011705">Contact us</a>
+      </div>
+      <p>VAT ID 03890720612</p>
+      <p class="footer-text">&copy; 2023 Mozzarella-Campana. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/mozzarellacampanacom" target="_blank" rel="noopener noreferrer">
+    				<img src="images/icons/facebook-icon.png" alt="Facebook">
+    		</a>
+    		<a href="https://instagram.com/mozzarella.campana?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" rel="noopener noreferrer">
+    				<img src="images/icons/instagram-icon.png" alt="Instagram">
+    		</a>
+    	</div>
+      </footer>
+
+      <script src="script.js"></script>
+
+    	<div id="overlay" class="overlay">
+      <div class="popup">
+        <span class="close-btn" onclick="closeOverlay()">X</span>
+        <h3>Avviso</h3>
+        <p>A partire dal giorno 8 Dicembre ogni Venerdì e Domenica, si effettuano consegne a domicilio costo zero per i pacchetti sottoindicati nei comuni di Napoli e Caserta, incluse le province.</p>
+    		<button onclick="closeOverlay(); playPopupSound()">Va bene</button>
+      </div>
+    </div>
+    </body>
+    </html>
